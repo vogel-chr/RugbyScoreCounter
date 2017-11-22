@@ -1,0 +1,288 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#467d1a"
+    tools:context="com.example.android.rugbyscorecounter.MainActivity">
+
+    <ImageView
+        android:id="@+id/pitch"
+        android:src="@drawable/pitch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:alpha=".4"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_marginRight="2dp">
+
+                <TextView
+
+                    android:id="@+id/team_a_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/team_a_name"
+                    android:textSize="@dimen/team_name_textSize"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/try_tally_text_team_a"
+                            android:text="Tries:"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textSize="@dimen/try_tally_textSize"
+                            android:textColor="@color/text_color"
+                            />
+
+                        <TextView
+                            android:id="@+id/try_tally_team_a"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="@dimen/try_tally_textSize"
+                            android:textColor="@color/text_color"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:text="0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:gravity="center"
+                        android:textSize="@dimen/team_scores_textSize"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color"
+                        />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/team_a_try"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Try"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:onClick="TryA"
+                    />
+
+                <Button
+                    android:id="@+id/team_a_conTry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:layout_weight="1"
+                    android:onClick="ConTryA"
+                    android:text="Converted TRY"
+                    android:textAllCaps="false"
+                    />
+
+                <Button
+                    android:id="@+id/team_a_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:layout_weight="1"
+                    android:onClick="GoalA"
+                    android:text="Goal"
+                    android:textAllCaps="false"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="2"
+                android:layout_marginLeft="2dp">
+
+                <TextView
+
+                    android:id="@+id/team_b_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/team_b_name"
+                    android:textSize="@dimen/team_name_textSize"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:text="0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5"
+                        android:gravity="center"
+                        android:textSize="@dimen/team_scores_textSize"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/try_tally_text_team_b"
+                            android:text="Tries:"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:textSize="@dimen/try_tally_textSize"
+                            android:textColor="@color/text_color"
+                            />
+
+                        <TextView
+                            android:id="@+id/try_tally_team_b"
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:textSize="@dimen/try_tally_textSize"
+                            android:textColor="@color/text_color"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/team_b_try"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Try"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:onClick="TryB"
+                    />
+
+                <Button
+                    android:id="@+id/team_b_conTry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:layout_weight="1"
+                    android:onClick="ConTryB"
+                    android:text="Converted TRY"
+                    android:textAllCaps="false"
+                    />
+
+                <Button
+                    android:id="@+id/team_b_goal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/score_button_marginLeft"
+                    android:layout_marginRight="@dimen/score_button_marginRight"
+                    android:layout_weight="1"
+                    android:onClick="GoalB"
+                    android:text="Goal"
+                    android:textAllCaps="false"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            android:background="#253b13"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+        </View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/score_button_marginLeft"
+                android:layout_marginRight="@dimen/score_button_marginRight"
+                android:layout_centerHorizontal="true"
+                android:text="Reset"
+                android:onClick="reset"
+                />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/score_button_marginLeft"
+                android:layout_marginRight="@dimen/score_button_marginRight"
+                android:layout_centerHorizontal="true"
+                android:text="Undo"
+                android:onClick="undo"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
