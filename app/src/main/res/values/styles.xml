@@ -10,7 +10,6 @@
         <item name="colorButtonNormal">#33531a</item>
         <item name="android:textColorPrimary">@android:color/white</item>
         <item name="android:textSize">15sp</item>
-        <item name="android:fontFamily">sans-serif-medium</item>"
     </style>
 
 </resources>
