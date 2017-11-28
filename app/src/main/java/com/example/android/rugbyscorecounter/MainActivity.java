@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
+
         if (savedInstanceState != null) {
             scoreTeamA = savedInstanceState.getInt("StateScoreA");
             scoreTeamB = savedInstanceState.getInt("StateScoreB");
@@ -212,24 +212,5 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("StateScoreB", scoreTeamB);
         savedInstanceState.putInt("StateTriesA", teamATries);
         savedInstanceState.putInt("StateTriesB", teamBTries);
-    }
-
-    /**
-     * Method for restoring and displaying data after switching device orientation.
-     */
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-
-        if (savedInstanceState != null) {
-        scoreTeamA = savedInstanceState.getInt("StateScoreA");
-        scoreTeamB = savedInstanceState.getInt("StateScoreB");
-        teamATries = savedInstanceState.getInt("StateTriesA");
-        teamBTries = savedInstanceState.getInt("StateTriesB");
-        }
-        displayForTeamA(scoreTeamA);
-        displayTriesTeamA(teamATries);
-        displayForTeamB(scoreTeamB);
-        displayTriesTeamB(teamBTries);
     }
 }
